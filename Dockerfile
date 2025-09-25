@@ -35,4 +35,4 @@ EXPOSE 3000
 #CMD ["npm",  "start:prod"]
 
 # Commande de démarrage
-CMD ["sh", "-c", "npx prisma migrate deploy && npm start:prod"]
+CMD ["sh", "-c", "npx prisma migrate deploy && npm run dev"]
