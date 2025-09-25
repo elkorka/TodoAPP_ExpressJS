@@ -21,10 +21,12 @@ services:
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-}
-      MYSQL_DATABASE: ${DB_NAME:-gestiontaches_db}
-      MYSQL_USER: ${DB_USER:-root}
-      MYSQL_PASSWORD: ${DB_PASSWORD:-}
+      - PORT=3000
+      - DB_USERNAME=root
+      - DB_PASSWORD=
+      - DB_NAME=gestiontaches_db
+      - DB_HOST=db
+      - DB_PORT=3306
     ports:
       - "3306:3306"
     volumes:
